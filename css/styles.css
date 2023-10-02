@@ -132,3 +132,39 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Slideshow container */
+.game-pictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflowing images */
+}
+
+/* Individual images */
+.game-pictures img {
+    max-width: 100%;
+    max-height: 200px; /* Set a maximum height to make the images smaller */
+    display: block; /* Display images as blocks */
+    margin: 0 auto; /* Center images horizontally */
+    opacity: 0; /* Initially set image opacity to 0 */
+    transform: scale(0.8); /* Make images smaller */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add animation transitions */
+}
+
+/* Styling for the slideshow animation */
+.animate-slideshow {
+    animation: fadeInOut 3s linear infinite; /* Change animation duration as needed */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8); /* Start and end with smaller size */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1); /* Increase size in the middle of animation */
+    }
+}

@@ -17,16 +17,24 @@ header {
 nav ul {
     list-style-type: none;
     display: flex;
+    transition: transform 0.3s ease; /* Add a smooth transition */
 }
 
 nav ul li {
     margin-right: 20px;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transitions */
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1); /* Add a scale effect on hover */
 }
 
 /* Apply styles to logo */
@@ -36,7 +44,7 @@ nav ul li a {
 }
 
 .logo img {
-    width: 60px; /* Adjust the width as needed */
+    width: 60px;
     height: auto;
     margin-right: 10px;
 }
