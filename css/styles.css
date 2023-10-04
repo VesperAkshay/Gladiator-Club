@@ -91,9 +91,6 @@ h1, h2, h3 {
 
 /* Hero section styles */
 .hero {
-    background-image: url('images/background-image.jpg'); /* Add your background image path */
-    background-size: cover;
-    background-position: center;
     text-align: center;
     padding: 100px 0;
     color: #fff;
@@ -168,3 +165,25 @@ footer {
         transform: scale(1); /* Increase size in the middle of animation */
     }
 }
+
+/* Additional style for the background image */
+.hero-bg {
+    position: relative;
+    height: 100vh; /* Set a fixed height for the hero section */
+    margin-bottom: 10px; /* Reduce the margin to create less space between the hero section and footer */
+}
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg3.jpeg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.4; /* Adjust the opacity of the background image here */
+    z-index: -1;
+}
+
